@@ -1,3 +1,37 @@
 @mixin trans($tf: opacity, $td: 250ms, $tp: cubic-bezier(0.4, 0, 0.2, 1)) {
   transition: $tf $td $tp;
 }
+
+@mixin fonts(
+  $ff: Roboto,
+  $fss: normal,
+  $fw: 400,
+  $fs: 14px,
+  $lh: 24px,
+  $ls: 0.03em
+) {
+  font-family: $ff;
+  font-style: $fss;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh / $fs;
+  letter-spacing: $ls;
+}
+
+@mixin mobile {
+  @media screen and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
