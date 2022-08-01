@@ -1,0 +1,148 @@
+.header--appearance {
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--white-color);
+  border-bottom: 1px solid var(--main-bcgrnd-color);
+}
+
+.header__box {
+  display: flex;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header__navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  font-family: "Raleway";
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--add-font-colour);
+}
+
+.header__web {
+  color: var(--button-color);
+}
+
+.header__list {
+  display: flex;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+
+.header__link-border {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  text-align: center;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--add-font-color);
+}
+
+.header__items:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header__studio,
+.header__portfolio {
+  position: relative;
+  color: var(--button-color);
+}
+
+.header__studio::after,
+.header__portfolio::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  content: "";
+
+  transform: translateY(1px);
+  border-radius: 2px;
+  background-color: var(--button-color);
+}
+
+.header__contacts {
+  display: flex;
+  margin-left: auto;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header__communication:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header__reference {
+  display: flex;
+  color: var(--paragraph-color);
+  fill: var(--paragraph-color);
+  align-items: center;
+}
+
+.header__envelope-icon {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.header__phone-icon {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.header__link-animation,
+.header__reference--animation {
+  position: relative;
+
+  @include trans($tf: color);
+  @include trans($tf: fill);
+  // transition: color 250ms var(--transition-timing-function),
+  //   fill 250ms var(--transition-timing-function);
+
+  &:hover,
+  &:focus,
+  &:hover,
+  &:focus {
+    color: var(--button-color);
+    fill: var(--button-color);
+  }
+}
+
+.hero--appearance {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}

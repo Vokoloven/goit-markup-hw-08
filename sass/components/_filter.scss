@@ -1,0 +1,153 @@
+.filter {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  .filter-list {
+    display: flex;
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 0;
+    margin-bottom: 50px;
+  }
+  .result-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  .sort {
+    display: flex;
+    justify-content: center;
+  }
+
+  .filter-search {
+    background-color: var(--white-color);
+    width: calc((100% - 30 * 2px) / 3);
+  }
+
+  .border {
+    border: 1px solid #eeeeee;
+    @include trans($tf: box-shadow);
+    // transition: box-shadow 250ms var(--transition-timing-function);
+  }
+  .border:hover,
+  .border:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+  .result-search {
+    gap: 30px;
+  }
+  .filter-action {
+    position: relative;
+    overflow: hidden;
+  }
+  .hiden-action {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translateY(100%);
+    background-color: var(--rgba-bcgrnd-color-for-search);
+    @include trans($tf: transform);
+    // transition: transform 250ms var(--transition-timing-function);
+  }
+  .border:hover .hiden-action {
+    transform: translateY(0%);
+  }
+
+  .hiden-text {
+    display: block;
+
+    margin: 63px 24px;
+    min-width: 322px;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    color: var(--white-color);
+  }
+  .img {
+    display: block;
+    margin: 0;
+  }
+  .filter-title {
+    width: 322px;
+
+    margin-top: 0;
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+  .filter-paragraph {
+    width: 322px;
+
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+    color: var(--paragraph-color);
+  }
+}
+
+.filter-list > .items:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter-button {
+  display: inline-block;
+  padding: 8px 22px;
+  min-width: 73px;
+  text-align: center;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+
+  border: transparent;
+  border-radius: 4px;
+  background-color: var(--third-bcgrnd-color);
+  cursor: pointer;
+
+  @include trans($tf: color);
+  @include trans($tf: background-color);
+  @include trans($tf: box-shadow);
+
+  // transition: color 250ms var(--transition-timing-function),
+  //   background-color 250ms var(--transition-timing-function),
+  //   box-shadow 250ms var(--transition-timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--white-color);
+    background-color: var(--button-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.filter-search .center {
+  padding: 20px 24px 20px;
+}
+
+/* Additional distance between row and column */
+
+/* .result-search > .filter-search:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  
+  .result-search > .filter-search:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  } */

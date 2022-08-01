@@ -1,0 +1,318 @@
+.backdrop {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--rgba-backdrop-color);
+  opacity: 1;
+  @include trans;
+  // transition: opacity 250ms var(--transition-timing-function);
+
+  .modal-button {
+    display: block;
+    padding: 0;
+    margin-left: auto;
+    margin-top: 8px;
+    margin-right: 8px;
+
+    border: none;
+    width: 30px;
+    height: 30px;
+
+    @include trans($tf: fill);
+    // transition: fill 250ms var(--transition-timing-function);
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      fill: var(--button-color);
+    }
+  }
+  .modal-icon {
+    width: 30px;
+    height: 30px;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--white-color);
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contacts-title {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+    margin-top: 2px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--main-font-color);
+  }
+  .contacts-label {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .contacts-name {
+    position: relative;
+  }
+  .contacts-tel {
+    position: relative;
+  }
+  .contacts-mail {
+    position: relative;
+  }
+
+  .contacts-label:nth-child(n + 3) .contacts-box {
+    margin-top: 10px;
+  }
+  .contacts-box {
+    display: block;
+    margin-bottom: 4px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--paragraph-color);
+  }
+  .contacts-input {
+    min-width: 448px;
+    height: 40px;
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    @include trans($tf: outline-color);
+    @include trans($tf: border-color);
+    // transition: outline-color 250ms var(--transition-timing-function),
+    //   border-color 250ms var(--transition-timing-function);
+    cursor: pointer;
+    &:focus,
+    &:hover {
+      outline-color: var(--button-color);
+      border-color: var(--button-color);
+    }
+    &:focus + .icon-box,
+    &:hover + .icon-box {
+      fill: var(--button-color);
+      @include trans($tf: fill);
+      // transition: fill 250ms var(--transition-timing-function);
+    }
+  }
+  .contacts-label:nth-child(2) .icon-box {
+    position: absolute;
+
+    top: calc(100% / 2);
+    left: 12px;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  .contacts-label:nth-child(n + 3) .icon-box {
+    position: absolute;
+
+    top: calc((100% + 10px) / 2);
+    left: 12px;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  .contacts-comment {
+    min-width: 448px;
+    height: 120px;
+    resize: none;
+    padding-left: 16px;
+    padding-top: 12px;
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    @include trans($tf: outline-color);
+    @include trans($tf: border-color);
+    // transition: outline-color 250ms var(--transition-timing-function),
+    //   border-color 250ms var(--transition-timing-function);
+
+    &:focus,
+    &:hover {
+      outline-color: var(--button-color);
+      border-color: var(--button-color);
+    }
+  }
+  .contacts-comment::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  .contacts-agree:checked + .check-box-icon {
+    background-color: var(--button-color);
+    border-color: var(--button-color);
+    background-image: url("../images/checkbox.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-origin: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .contacts-checkbox {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: 52px;
+    margin-bottom: 30px;
+  }
+  .checkbox-text {
+    margin-left: 7px;
+
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--paragraph-color);
+  }
+
+  .checkbox-link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration-line: underline;
+
+    color: var(--button-color);
+  }
+  .contacts-button-text {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: var(--white-color);
+  }
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  min-width: 528px;
+  min-height: 581px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: var(--white-color);
+  transform: translate(-50%, -50%) scale(1);
+  @include trans($tf: transform);
+  // transition: transform 250ms var(--transition-timing-function);
+}
+
+/* .backdrop .contacts-name::after {
+    position: absolute;
+    top: calc(100% / 2);
+    left: 12px;
+  
+    display: block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url("../images/name.svg");
+  } */
+
+/* .backdrop .contacts-tel::after {
+    position: absolute;
+    top: calc((100% + 10px) / 2);
+    left: 12px;
+  
+    display: block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url("../images/phone-contacts.svg");
+  } */
+
+/* .backdrop .contacts-mail::after {
+    position: absolute;
+    top: calc((100% + 10px) / 2);
+    left: 12px;
+  
+    display: block;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url("../images/mail-contacts.svg");
+  } */
+
+.contacts-label .icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Hidden Check-box */
+.contacts-agree {
+  /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    position: absolute; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.contacts-checkbox .check-box-icon {
+  display: block;
+  width: 16px;
+  height: 15px;
+
+  border: 1px solid #000000;
+  border-radius: 2px;
+  @include trans($tf: background-color);
+  // transition: background-color 250ms var(--transition-timing-function);
+}
+
+.contacts-button {
+  margin: 0 auto;
+  padding: 10px 52px;
+
+  min-width: 200px;
+  height: 50px;
+
+  background-color: var(--button-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  cursor: pointer;
+}

@@ -1,0 +1,60 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.astronaut {
+  width: 1.0537109375em;
+}
+
+.brand {
+  width: 1.3408203125em;
+}
+
+.clock {
+  width: 0.974609375em;
+}
+
+.company {
+  width: 1.0712890625em;
+}
+
+.ctagline {
+  width: 1.9248046875em;
+}
+
+.diagram {
+  width: 1.1142578125em;
+}
+
+.envelope {
+  width: 1.3330078125em;
+}
+
+.foster {
+  width: 1.7802734375em;
+}
+
+.phone {
+  width: 0.625em;
+}
+
+.tagline {
+  width: 0.76953125em;
+}
+
+.yaco {
+  width: 0.8720703125em;
+}
