@@ -1,52 +1,62 @@
 .overlay {
-    max-width: 1600px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  @include mobile {
+    width: 480px;
+    height: 400px;
+
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/hero.jpg");
+      url("../images/hero-mob.jpg");
   }
+}
+
+.hero--appearance {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 
 .hero__title {
-    width: 696px;
-  
-    margin: 0 auto 30px;
-  
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
+  @include mobile {
+    margin-bottom: 30px;
+    @include fonts($fw: 900, $fs: 26px, $lh: 42px, $ls: 0.06em);
     text-align: center;
-    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--white-color);
   }
-  
-  .hero__button {
-    display: block;
-    padding: 10px 32px;
-    min-width: 200px;
-    margin: 0 auto;
-  
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: var(--white-color);
-  
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: transparent;
-    background-color: var(--button-color);
-  
-    cursor: pointer;
-  }
-  .hero__button:hover,
-  .hero__button:focus {
-    color: var(--add-font-color);
-  }
+  // width: 696px;
+
+  // margin: 0 auto 30px;
+
+  // font-weight: 900;
+  // font-size: 44px;
+  // line-height: 1.4;
+  // text-align: center;
+  // letter-spacing: 0.06em;
+  // text-transform: uppercase;
+  // color: var(--white-color);
+}
+
+.hero__button {
+  display: block;
+  padding: 10px 32px;
+  min-width: 200px;
+  margin: 0 auto;
+
+  @include fonts($ff: inherit, $fw: 700, $fs: 16px, $lh: 30px, $ls: 0.06em);
+
+  align-items: center;
+  text-align: center;
+  color: var(--white-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: transparent;
+  background-color: var(--button-color);
+}
+.hero__button:hover,
+.hero__button:focus {
+  color: var(--add-font-color);
+}
