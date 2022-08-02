@@ -2,8 +2,10 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  // padding-top: 94px;
-  // padding-bottom: 94px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   .regular-customers {
     margin-top: 0;
@@ -11,6 +13,10 @@
 
     text-align: center;
     @include fonts($fw: 700, $fs: 28px, $lh: 33px);
+
+    @include desktop {
+      @include fonts($fw: 700, $fs: 36px, $lh: 42px);
+    }
   }
 
   .list-customers {

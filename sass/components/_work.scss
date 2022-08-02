@@ -1,15 +1,22 @@
 .work {
+  display: none;
+
+  @include tablet {
+    display: contents;
+  }
+
   padding-bottom: 94px;
 
   .work-title {
     margin-top: 0;
     margin-bottom: 50px;
 
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2;
     text-align: center;
-    letter-spacing: 0.03em;
+    @include fonts($fw: 700, $fs: 28px, $lh: 33px);
+
+    @include desktop {
+      @include fonts($fw: 700, $fs: 36px, $lh: 42px);
+    }
   }
 
   .list {

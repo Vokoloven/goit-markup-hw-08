@@ -34,7 +34,6 @@
 }
 
 .hero__title {
-  width: 360px;
   padding-top: 118px;
   margin: 0 auto 30px;
 
@@ -42,6 +41,10 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--white-color);
+
+  @include tablet {
+    width: 360px;
+  }
 
   @include desktop {
     width: 696px;

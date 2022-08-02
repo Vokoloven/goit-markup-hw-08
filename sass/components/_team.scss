@@ -17,6 +17,10 @@
     margin-bottom: 30px;
     text-align: center;
     @include fonts($fw: 700, $fs: 28px, $lh: 33px);
+
+    @include desktop {
+      @include fonts($fw: 700, $fs: 36px, $lh: 42px);
+    }
   }
 
   .team-list {

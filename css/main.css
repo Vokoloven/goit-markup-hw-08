@@ -241,7 +241,6 @@ body {
 }
 
 .hero__title {
-  width: 360px;
   padding-top: 118px;
   margin: 0 auto 30px;
   font-family: Roboto;
@@ -253,6 +252,11 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: var(--white-color);
+}
+@media screen and (min-width: 768px) {
+  .hero__title {
+    width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
@@ -359,7 +363,6 @@ body {
 
 .feature__title {
   margin-bottom: 10px;
-  text-align: center;
   font-family: Roboto;
   font-style: normal;
   font-weight: 700;
@@ -398,16 +401,34 @@ body {
 }
 
 .work {
+  display: none;
   padding-bottom: 94px;
+}
+@media screen and (min-width: 768px) {
+  .work {
+    display: contents;
+  }
 }
 .work .work-title {
   margin-top: 0;
   margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
   text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.1785714286;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .work .work-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.03em;
+  }
 }
 .work .list {
   display: flex;
@@ -471,6 +492,16 @@ body {
   font-size: 28px;
   line-height: 1.1785714286;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .team .team-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.03em;
+  }
 }
 .team .team-list {
   display: flex;
@@ -571,6 +602,12 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .customers {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 .customers .regular-customers {
   margin-top: 0;
   margin-bottom: 50px;
@@ -581,6 +618,16 @@ body {
   font-size: 28px;
   line-height: 1.1785714286;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .customers .regular-customers {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.03em;
+  }
 }
 .customers .list-customers {
   display: flex;
