@@ -193,12 +193,20 @@
 
     @include fonts($fs: 12px, $lh: 14px);
     color: var(--paragraph-color);
+
+    @include desktop {
+      @include fonts($fs: 14px, $lh: 24px);
+    }
   }
 
   .checkbox-link {
     @include fonts($fs: 12px, $lh: 14px);
     text-decoration-line: underline;
     color: var(--button-color);
+
+    @include desktop {
+      @include fonts($fs: 14px, $lh: 24px);
+    }
   }
 
   .contacts-button-text {

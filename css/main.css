@@ -1315,6 +1315,16 @@ body {
   letter-spacing: 0.03em;
   color: var(--paragraph-color);
 }
+@media screen and (min-width: 1200px) {
+  .backdrop .checkbox-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7142857143;
+    letter-spacing: 0.03em;
+  }
+}
 .backdrop .checkbox-link {
   font-family: Roboto;
   font-style: normal;
@@ -1325,6 +1335,16 @@ body {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
   color: var(--button-color);
+}
+@media screen and (min-width: 1200px) {
+  .backdrop .checkbox-link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7142857143;
+    letter-spacing: 0.03em;
+  }
 }
 .backdrop .contacts-button-text {
   font-family: inherit;
