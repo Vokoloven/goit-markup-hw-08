@@ -8,6 +8,7 @@
 
 .header__box {
   display: flex;
+  align-items: center;
 }
 
 .header__navigation {
@@ -129,4 +130,51 @@
     color: var(--button-color);
     fill: var(--button-color);
   }
+}
+
+.open-btn {
+  margin-left: auto;
+
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  background-color: transparent;
+  border: 0;
+}
+
+.opem-btn__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.close-btn {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  background-color: transparent;
+  border: 0;
+}
+
+.close-btn__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mob-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  background-color: var(--white-color);
 }
