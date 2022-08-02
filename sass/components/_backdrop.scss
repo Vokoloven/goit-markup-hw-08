@@ -234,8 +234,12 @@
   top: 50%;
   left: 50%;
 
-  min-width: 450px;
+  min-width: 320px;
   min-height: 450px;
+
+  @include mobile {
+    min-width: 450px;
+  }
 
   padding-bottom: 40px;
 
