@@ -29,7 +29,7 @@
   }
 
   .items {
-    width: ((100% - 2 * 30px) / 3);
+    width: calc((100% - 2 * 30px) / 3);
   }
 
   .img {

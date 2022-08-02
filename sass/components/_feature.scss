@@ -35,6 +35,16 @@
   }
 }
 
+.feature__items:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+@include tablet {
+  .feature__items:not(:last-child) {
+    margin-bottom: 0px;
+  }
+}
+
 // .feature__items:not(:last-child) {
 //   margin-right: 30px;
 // }
@@ -97,23 +107,8 @@
 }
 
 .feature__paragraph {
-  margin-bottom: 30px;
   text-align: start;
-  @include tablet {
-    margin-bottom: 27px;
-  }
-  @include desktop {
-    width: 270px;
-  }
 
-  // width: 270px;
-
-  // margin-top: 0;
-  // margin-bottom: 0;
-
-  // font-size: 14px;
-  // line-height: 1.7;
-  // letter-spacing: 0.03em;
   @include fonts;
   color: var(--paragraph-color);
 }
