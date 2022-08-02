@@ -1,19 +1,26 @@
 .customers {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  // padding-top: 94px;
+  // padding-bottom: 94px;
 
   .regular-customers {
     margin-top: 0;
     margin-bottom: 50px;
 
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.2;
     text-align: center;
+    @include fonts($fw: 700, $fs: 28px, $lh: 33px);
   }
 
   .list-customers {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include desktop {
+      gap: 0px 30px;
+    }
 
     margin-left: auto;
     margin-right: auto;
@@ -21,9 +28,19 @@
     justify-content: center;
   }
 
-  .items:not(:last-child) {
-    margin-right: 30px;
+  .items {
+    width: calc((100% - 30px) / 2);
+    @include tablet {
+      width: calc((100% - 2 * 30px) / 3);
+    }
+    @include desktop {
+      width: calc((100% - 5 * 30px) / 6);
+    }
   }
+
+  // .items:not(:last-child) {
+  //   margin-right: 30px;
+  // }
 
   .customers-icon {
     width: 106px;
@@ -36,10 +53,18 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  width: 170px;
+  width: 210px;
   height: 92px;
   margin-right: auto;
   margin-left: auto;
+
+  @include tablet {
+    width: 226px;
+  }
+
+  @include desktop {
+    width: 170px;
+  }
 
   border: 1px solid var(--social-network);
   border-radius: 4px;
