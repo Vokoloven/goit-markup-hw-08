@@ -102,9 +102,8 @@
 
     margin: 63px 24px;
     min-width: 322px;
-    font-size: 18px;
-    line-height: 1.6;
-    letter-spacing: 0.03em;
+
+    @include fonts($fs: 18px, $lh: 29px);
     color: var(--white-color);
   }
   .img {
@@ -116,20 +115,16 @@
 
     margin-top: 0;
     margin-bottom: 4px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+
+    @include fonts($fw: 700, $fs: 18px, $lh: 36px, $ls: 0.06em);
   }
+
   .filter-paragraph {
     width: 322px;
 
     margin: 0;
 
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.9;
-    letter-spacing: 0.03em;
+    @include fonts($fs: 16px, $lh: 30px);
     color: var(--paragraph-color);
   }
 }
@@ -144,11 +139,7 @@
   min-width: 73px;
   text-align: center;
 
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-
+  @include fonts($ff: inherit, $fw: 500, $fs: 16px, $lh: 26px);
   border: transparent;
   border-radius: 4px;
   background-color: var(--third-bcgrnd-color);

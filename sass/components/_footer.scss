@@ -6,17 +6,15 @@
   padding-bottom: 60px;
 
   .footer-box {
-    display: flex;
+    @include desktop {
+      display: flex;
+    }
   }
   .footer-logo {
     display: inline-block;
     margin-bottom: 20px;
 
-    font-family: "Raleway";
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
+    @include fonts($ff: Raleway, $fw: 700, $fs: 26px, $lh: 19px);
     color: var(--white-color);
   }
   .footer-logo-web {
@@ -24,10 +22,8 @@
   }
   .footer-link,
   .footer-address {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
+    @include fonts($fs: 14px, $lh: 24px);
+
     color: var(--white-color);
     @include trans($tf: color);
     // transition: color 250ms var(--transition-timing-function);
@@ -64,10 +60,7 @@
     margin-bottom: 20px;
     padding: 0;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.1;
-    letter-spacing: 0.03em;
+    @include fonts($fw: 700, $fs: 14, $lh: 15px);
     text-transform: uppercase;
 
     color: var(--white-color);
@@ -107,10 +100,12 @@
   }
 
   .follow-form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
 
     margin-left: 93px;
     min-width: 570px;
@@ -122,10 +117,7 @@
     margin-bottom: 20px;
     margin-right: auto;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
+    @include fonts($fw: 700, $fs: 14px, $lh: 16px);
     text-transform: uppercase;
 
     color: var(--white-color);
@@ -152,10 +144,7 @@
     color: var(--white-color);
   }
   .follow-mail::placeholder {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    letter-spacing: 0.03em;
+    @include fonts($fs: 16px, $lh: 20px);
     color: rgba(255, 255, 255, 0.6);
   }
   .follow-button {
@@ -177,13 +166,8 @@
     margin-left: 28px;
     margin-right: 10px;
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
+    @include fonts($ff: inherit, $fw: 700, $fs: 16px, $lh: 30px, $ls: 0.06em);
     text-align: center;
-    letter-spacing: 0.06em;
-    font-family: inherit;
-
     color: var(--white-color);
   }
   .follow-button-icon {
@@ -214,10 +198,7 @@
   margin-right: auto;
   margin-bottom: 20px;
 
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
+  @include fonts($fw: 700, $fs: 14px, $lh: 16px);
   text-transform: uppercase;
   color: var(--white-color);
 }
@@ -248,11 +229,7 @@
   min-width: 109px;
   height: 30px;
 
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-
+  @include fonts($fw: 700, $fs: 16px, $lh: 30px, $ls: 0.06em);
   color: var(--white-color);
 }
 
