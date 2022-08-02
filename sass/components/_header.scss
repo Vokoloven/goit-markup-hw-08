@@ -21,11 +21,7 @@
   padding-top: 24px;
   padding-bottom: 24px;
 
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
+  @include fonts($ff: Raleway, $fw: 700, $fs: 26px, $lh: 31px);
   text-decoration: none;
   color: var(--add-font-colour);
 }
@@ -40,10 +36,9 @@
   margin-top: 0;
   margin-bottom: 0;
 
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.02em;
+  @include fonts($fw: 500, $fs: 14px, $lh: 15px, $ls: 0.02em);
+  display: none;
+  // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>HERE
 }
 
 .header__link-border {
@@ -91,6 +86,8 @@
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
+  display: none;
+  // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>HERE
 }
 
 .header__communication:not(:last-child) {
