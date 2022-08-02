@@ -96,8 +96,8 @@
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    @include trans($tf: outline-color);
     @include trans($tf: border-color);
+    @include trans($tf: outline-color);
     // transition: outline-color 250ms var(--transition-timing-function),
     //   border-color 250ms var(--transition-timing-function);
     cursor: pointer;
