@@ -9,7 +9,11 @@
 
   .regular-customers {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include desktop {
+      margin-bottom: 50px;
+    }
 
     text-align: center;
     @include fonts($fw: 700, $fs: 28px, $lh: 33px);
