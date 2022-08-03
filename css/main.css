@@ -1309,9 +1309,6 @@ body {
     width: calc((100% - 60px) / 3);
   }
 }
-.filter .filter-search:not(:last-child) {
-  margin-bottom: 30px;
-}
 @media screen and (min-width: 768px) {
   .filter .filter-search:not(:last-child) {
     margin-bottom: 0;

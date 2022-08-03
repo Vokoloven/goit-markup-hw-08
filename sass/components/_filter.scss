@@ -47,9 +47,9 @@
     }
   }
 
-  .filter-search:not(:last-child) {
-    margin-bottom: 30px;
-  }
+  // .filter-search:not(:last-child) {
+  //   margin-bottom: 30px;
+  // }
 
   @include tablet {
     .filter-search:not(:last-child) {
