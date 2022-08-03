@@ -39,6 +39,9 @@
 
   @include fonts($fw: 500, $fs: 14px, $lh: 15px, $ls: 0.02em);
   display: none;
+  @include tablet {
+    display: contents;
+  }
   // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>HERE
 }
 
@@ -88,11 +91,27 @@
   margin-top: 0;
   margin-bottom: 0;
   display: none;
+  @include tablet {
+    display: contents;
+    display: inline-block;
+    @include desktop {
+      display: flex;
+    }
+  }
+
   // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>HERE
 }
 
-.header__communication:not(:last-child) {
-  margin-right: 30px;
+@include tablet {
+  .header__communication:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@include desktop {
+  .header__communication:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .header__reference {
@@ -132,8 +151,18 @@
   }
 }
 
+@include tablet {
+  .header__reference--animation {
+    padding: 0;
+  }
+}
+
 .open-btn {
   margin-left: auto;
+
+  @include tablet {
+    display: none;
+  }
 
   display: flex;
   width: 40px;
@@ -142,11 +171,25 @@
 
   background-color: transparent;
   border: 0;
+
+  @include fonts($fw: 500, $fs: 18px, $lh: 22px, $ls: 0.02em);
+
+  @include trans($tf: color);
+  &:hover,
+  &:focus {
+    color: var(--button-color);
+  }
 }
 
 .open-btn__icon {
   width: 40px;
   height: 40px;
+
+  @include trans($tf: fill);
+  &:hover,
+  &:focus {
+    fill: var(--button-color);
+  }
 }
 
 .mob-menu {
@@ -164,17 +207,26 @@
   padding-left: 48px;
 
   background-color: var(--white-color);
+
+  > .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0;
+    // overflow: auto;
+  }
 }
 
-.mob-container {
-  margin: 0 auto;
-  // width: 100%;
+.mob-menu.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .close-btn {
   position: absolute;
   top: 10px;
-  left: 425px;
+  right: 15px;
 
   display: flex;
   width: 40px;
@@ -185,7 +237,8 @@
   border: 0;
 
   @include trans($tf: fill);
-  &:hover {
+  &:hover,
+  &:focus {
     fill: var(--button-color);
   }
 }
@@ -203,17 +256,14 @@
   margin-bottom: 32px;
 }
 
-.mob-menu__items:last-child {
-  margin-bottom: 302px;
-}
-
 .mob-menu__stuio {
   color: var(--button-color);
 }
 
-.mob-menu-animation:hover {
+.mob-menu-animation {
   @include trans($tf: color);
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--button-color);
   }
 }
@@ -233,7 +283,8 @@
 
 .mob-menu__referance {
   @include trans($tf: color);
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--button-color);
   }
 }
@@ -245,6 +296,13 @@
 
 .mob-menu__social-network {
   position: relative;
+  @include fonts($fw: 500, $fs: 18px, $lh: 22px, $ls: 0.02em);
+
+  @include trans($tf: color);
+  &:hover,
+  &:focus {
+    color: var(--button-color);
+  }
 }
 
 .mob-menu__social-items:not(:last-child) {
@@ -263,11 +321,6 @@
   }
 }
 
-.mob-menu__social-items {
-  @include fonts($fw: 500, $fs: 18px, $lh: 22px, $ls: 0.02em);
-
-  @include trans($tf: color);
-  &:hover {
-    color: var(--button-color);
-  }
+.no-scroll {
+  overflow: hidden;
 }

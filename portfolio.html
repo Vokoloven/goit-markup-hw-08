@@ -19,7 +19,7 @@
   </head>
   <body>
     <!-- Шапка сайта -->
-    <!-- <header class="header header--appearance">
+    <header class="header header--appearance">
       <div class="header__box container">
         <nav class="header__navigation">
           <a href="./index.html" class="header__logo"
@@ -29,14 +29,14 @@
             <li class="header__items">
               <a
                 href="./index.html"
-                class="header__link-animation header__link-border"
+                class="header__studio header__link-animation header__link-border"
                 >Студия</a
               >
             </li>
             <li class="header__items">
               <a
                 href="./portfolio.html"
-                class="header__portfolio header__link-animation header__link-border"
+                class="header__link-animation header__link-border"
                 >Портфолио</a
               >
             </li>
@@ -67,8 +67,69 @@
             >
           </li>
         </ul>
+        <button type="button" class="open-btn">
+          <svg class="open-btn__icon" width="40px" height="40px">
+            <use href="./images/icons.svg#menu_40px" />
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden no-scroll">
+        <div class="container">
+          <div class="mob-menu__top">
+            <button type="button" class="close-btn" heig>
+              <svg class="close-btn__icon" width="40px" height="40px">
+                <use href="./images/icons.svg#close_40px" />
+              </svg>
+            </button>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__items mob-menu__stuio">
+                <a href="./index.html" class="mob-menu-animation link"
+                  >Студия</a
+                >
+              </li>
+              <li class="mob-menu__items">
+                <a href="./portfolio.html" class="mob-menu-animation link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mob-menu__items">
+                <a href="" class="mob-menu-animation link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu__bottom">
+            <ul class="mob-contacts list">
+              <li class="mob-menu__phone">
+                <a href="tel:+380961111111" class="mob-menu__referance link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-menu__mail">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mob-menu__referance link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-menu__social list">
+              <li class="mob-menu__social-items">
+                <a href="" class="mob-menu__social-network link">Twitter</a>
+              </li>
+              <li class="mob-menu__social-items">
+                <a href="" class="mob-menu__social-network link">Instagram</a>
+              </li>
+              <li class="mob-menu__social-items">
+                <a href="" class="mob-menu__social-network link">Facebook</a>
+              </li>
+              <li class="mob-menu__social-items">
+                <a href="" class="mob-menu__social-network link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <!-- Фильтр поиска -->
     <main>
       <section class="filter">
@@ -97,12 +158,29 @@
             <li class="filter-search">
               <div class="border">
                 <div class="filter-action">
-                  <img
-                    src="./images/8.jpg"
-                    alt="laptop"
-                    width="370"
-                    class="img"
-                  />
+                  <picture
+                    ><source
+                      srcset="
+                        ./images/portfolio/portfolio-370px/portfolio-one-370.jpg    1x,
+                        ./images/portfolio/portfolio-370px/portfolio-one-370@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio-354px/portfolio-one-354.jpg    1x,
+                        ./images/portfolio/portfolio-354px/portfolio-one-354@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio-450px/portfolio-one-450.jpg    1x,
+                        ./images/portfolio/portfolio-450px/portfolio-one-450@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)" />
+                    <img
+                      src="./images/8.jpg"
+                      alt="laptop"
+                      width="370"
+                      class="img"
+                  /></picture>
                   <div class="hiden-action">
                     <span class="hiden-text"
                       >Ресурс предлагает комплексные предложения с разным
@@ -121,12 +199,29 @@
             <li class="filter-search">
               <div class="border">
                 <div class="filter-action">
-                  <img
-                    src="./images/9.jpg"
-                    alt="laptop"
-                    width="370"
-                    class="img"
-                  />
+                  <picture
+                    ><source
+                      srcset="
+                        ./images/portfolio/portfolio-370px/portfolio-two-370.jpg    1x,
+                        ./images/portfolio/portfolio-370px/portfolio-two-370@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio-354px/portfolio-two-354.jpg    1x,
+                        ./images/portfolio/portfolio-354px/portfolio-two-354@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio-450px/portfolio-two-450.jpg    1x,
+                        ./images/portfolio/portfolio-450px/portfolio-two-450@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)" />
+                    <img
+                      src="./images/9.jpg"
+                      alt="laptop"
+                      width="370"
+                      class="img"
+                  /></picture>
                   <div class="hiden-action">
                     <span class="hiden-text"
                       >Ресурс предлагает комплексные предложения с разным
@@ -145,12 +240,29 @@
             <li class="filter-search">
               <div class="border">
                 <div class="filter-action">
-                  <img
-                    src="./images/10.jpg"
-                    alt="laptop"
-                    width="370"
-                    class="img"
-                  />
+                  <picture
+                    ><source
+                      srcset="
+                        ./images/portfolio/portfolio-370px/portfolio-three-370.jpg    1x,
+                        ./images/portfolio/portfolio-370px/portfolio-three-370@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio-354px/portfolio-three-354.jpg    1x,
+                        ./images/portfolio/portfolio-354px/portfolio-three-354@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio-450px/portfolio-three-450.jpg    1x,
+                        ./images/portfolio/portfolio-450px/portfolio-three-450@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)" />
+                    <img
+                      src="./images/10.jpg"
+                      alt="laptop"
+                      width="370"
+                      class="img"
+                  /></picture>
                   <div class="hiden-action">
                     <span class="hiden-text"
                       >Ресурс предлагает комплексные предложения с разным
@@ -169,12 +281,29 @@
             <li class="filter-search">
               <div class="border">
                 <div class="filter-action">
-                  <img
-                    src="./images/11.jpg"
-                    alt="laptop"
-                    width="370"
-                    class="img"
-                  />
+                  <picture
+                    ><source
+                      srcset="
+                        ./images/portfolio/portfolio-370px/portfolio-four-370.jpg    1x,
+                        ./images/portfolio/portfolio-370px/portfolio-four-370@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio-354px/portfolio-four-354.jpg    1x,
+                        ./images/portfolio/portfolio-354px/portfolio-four-354@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio-450px/portfolio-four-450.jpg    1x,
+                        ./images/portfolio/portfolio-450px/portfolio-four-450@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)" />
+                    <img
+                      src="./images/11.jpg"
+                      alt="laptop"
+                      width="370"
+                      class="img"
+                  /></picture>
                   <div class="hiden-action">
                     <span class="hiden-text"
                       >Ресурс предлагает комплексные предложения с разным
@@ -193,12 +322,29 @@
             <li class="filter-search">
               <div class="border">
                 <div class="filter-action">
-                  <img
-                    src="./images/12.jpg"
-                    alt="laptop"
-                    width="370"
-                    class="img"
-                  />
+                  <picture
+                    ><source
+                      srcset="
+                        ./images/portfolio/portfolio-370px/portfolio-five-370.jpg    1x,
+                        ./images/portfolio/portfolio-370px/portfolio-five-370@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio-354px/portfolio-five-354.jpg    1x,
+                        ./images/portfolio/portfolio-354px/portfolio-five-354@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio-450px/portfolio-five-450.jpg    1x,
+                        ./images/portfolio/portfolio-450px/portfolio-five-450@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)" />
+                    <img
+                      src="./images12.jpg"
+                      alt="laptop"
+                      width="370"
+                      class="img"
+                  /></picture>
                   <div class="hiden-action">
                     <span class="hiden-text"
                       >Ресурс предлагает комплексные предложения с разным
@@ -217,12 +363,29 @@
             <li class="filter-search">
               <div class="border">
                 <div class="filter-action">
-                  <img
-                    src="./images/13.jpg"
-                    alt="laptop"
-                    width="370"
-                    class="img"
-                  />
+                  <picture
+                    ><source
+                      srcset="
+                        ./images/portfolio/portfolio-370px/portfolio-six-370.jpg    1x,
+                        ./images/portfolio/portfolio-370px/portfolio-six-370@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio-354px/portfolio-six-354.jpg    1x,
+                        ./images/portfolio/portfolio-354px/portfolio-six-354@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio-450px/portfolio-six-450.jpg    1x,
+                        ./images/portfolio/portfolio-450px/portfolio-six-450@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)" />
+                    <img
+                      src="./images/13.jpg"
+                      alt="laptop"
+                      width="370"
+                      class="img"
+                  /></picture>
                   <div class="hiden-action">
                     <span class="hiden-text"
                       >Ресурс предлагает комплексные предложения с разным
@@ -241,12 +404,29 @@
             <li class="filter-search">
               <div class="border">
                 <div class="filter-action">
-                  <img
-                    src="./images/14.jpg"
-                    alt="laptop"
-                    width="370"
-                    class="img"
-                  />
+                  <picture
+                    ><source
+                      srcset="
+                        ./images/portfolio/portfolio-370px/portfolio-seven-370.jpg    1x,
+                        ./images/portfolio/portfolio-370px/portfolio-seven-370@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio-354px/portfolio-seven-354.jpg    1x,
+                        ./images/portfolio/portfolio-354px/portfolio-seven-354@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio-450px/portfolio-seven-450.jpg    1x,
+                        ./images/portfolio/portfolio-450px/portfolio-seven-450@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)" />
+                    <img
+                      src="./images/14.jpg"
+                      alt="laptop"
+                      width="370"
+                      class="img"
+                  /></picture>
                   <div class="hiden-action">
                     <span class="hiden-text"
                       >Ресурс предлагает комплексные предложения с разным
@@ -265,12 +445,29 @@
             <li class="filter-search">
               <div class="border">
                 <div class="filter-action">
-                  <img
-                    src="./images/15.jpg"
-                    alt="laptop"
-                    width="370"
-                    class="img"
-                  />
+                  <picture
+                    ><source
+                      srcset="
+                        ./images/portfolio/portfolio-370px/portfolio-eight-370.jpg    1x,
+                        ./images/portfolio/portfolio-370px/portfolio-eight-370@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio-354px/portfolio-eight-354.jpg    1x,
+                        ./images/portfolio/portfolio-354px/portfolio-eight-354@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio-450px/portfolio-eight-450.jpg    1x,
+                        ./images/portfolio/portfolio-450px/portfolio-eight-450@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)" />
+                    <img
+                      src="./images/15.jpg"
+                      alt="laptop"
+                      width="370"
+                      class="img"
+                  /></picture>
                   <div class="hiden-action">
                     <span class="hiden-text"
                       >Ресурс предлагает комплексные предложения с разным
@@ -289,12 +486,29 @@
             <li class="filter-search">
               <div class="border">
                 <div class="filter-action">
-                  <img
-                    src="./images/16.jpg"
-                    alt="laptop"
-                    width="370"
-                    class="img"
-                  />
+                  <picture
+                    ><source
+                      srcset="
+                        ./images/portfolio/portfolio-370px/portfolio-nine-370.jpg    1x,
+                        ./images/portfolio/portfolio-370px/portfolio-nine-370@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/portfolio-354px/portfolio-nine-354.jpg    1x,
+                        ./images/portfolio/portfolio-354px/portfolio-nine-354@2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/portfolio-450px/portfolio-nine-450.jpg    1x,
+                        ./images/portfolio/portfolio-450px/portfolio-nine-450@2x.jpg 2x
+                      "
+                      media="(min-width: 480px)" />
+                    <img
+                      src="./images/16.jpg"
+                      alt="laptop"
+                      width="370"
+                      class="img"
+                  /></picture>
                   <div class="hiden-action">
                     <span class="hiden-text"
                       >Ресурс предлагает комплексные предложения с разным
@@ -315,14 +529,14 @@
       </section>
     </main>
     <!-- Контакты -->
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="footer-box container">
         <div class="address-box">
           <a href="./index.html" class="footer-logo link"
             ><span class="footer-logo-web">Web</span>Studio</a
           >
           <address>
-            <ul class="list">
+            <ul class="address-list list">
               <li class="goto">
                 <a
                   href="https://www.google.com/maps/d/viewer?mid=10uSM3H-mIU3GznYo2szRIEphczw&hl=en_US"
@@ -406,6 +620,7 @@
               name="mail"
               class="follow-mail"
               placeholder="E-mail"
+              required
           /></label>
           <button type="submit" class="follow-button">
             <span class="follow-button-text">Подписаться</span
@@ -416,6 +631,6 @@
           </button>
         </form>
       </div>
-    </footer> -->
+    </footer>
   </body>
 </html>

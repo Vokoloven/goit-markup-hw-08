@@ -73,54 +73,60 @@
           </svg>
         </button>
       </div>
-      <div class="mob-menu">
-        <div class="mob-container">
-          <button type="button" class="close-btn" heig>
-            <svg class="close-btn__icon" width="40px" height="40px">
-              <use href="./images/icons.svg#close_40px" />
-            </svg>
-          </button>
-          <ul class="mob-menu__list list">
-            <li class="mob-menu__items mob-menu__stuio">
-              <a href="./index.html" class="mob-menu-animation link">Студия</a>
-            </li>
-            <li class="mob-menu__items">
-              <a href="./portfolio.html" class="mob-menu-animation link"
-                >Портфолио</a
-              >
-            </li>
-            <li class="mob-menu__items">
-              <a href="" class="mob-menu-animation link">Контакты</a>
-            </li>
-          </ul>
-          <ul class="mob-contacts list">
-            <li class="mob-menu__phone">
-              <a href="tel:+380961111111" class="mob-menu__referance link"
-                >+38 096 111 11 11</a
-              >
-            </li>
-            <li class="mob-menu__mail">
-              <a
-                href="mailto:info@devstudio.com"
-                class="mob-menu__referance link"
-                >info@devstudio.com</a
-              >
-            </li>
-          </ul>
-          <ul class="mob-menu__social list">
-            <li class="mob-menu__social-items">
-              <a href="" class="mob-menu__social-network link">Twitter</a>
-            </li>
-            <li class="mob-menu__social-items">
-              <a href="" class="mob-menu__social-network link">Instagram</a>
-            </li>
-            <li class="mob-menu__social-items">
-              <a href="" class="mob-menu__social-network link">Facebook</a>
-            </li>
-            <li class="mob-menu__social-items">
-              <a href="" class="mob-menu__social-network link">LinkedIn</a>
-            </li>
-          </ul>
+      <div class="mob-menu is-hidden no-scroll">
+        <div class="container">
+          <div class="mob-menu__top">
+            <button type="button" class="close-btn" heig>
+              <svg class="close-btn__icon" width="40px" height="40px">
+                <use href="./images/icons.svg#close_40px" />
+              </svg>
+            </button>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__items mob-menu__stuio">
+                <a href="./index.html" class="mob-menu-animation link"
+                  >Студия</a
+                >
+              </li>
+              <li class="mob-menu__items">
+                <a href="./portfolio.html" class="mob-menu-animation link"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mob-menu__items">
+                <a href="" class="mob-menu-animation link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu__bottom">
+            <ul class="mob-contacts list">
+              <li class="mob-menu__phone">
+                <a href="tel:+380961111111" class="mob-menu__referance link"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-menu__mail">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mob-menu__referance link"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-menu__social list">
+              <li class="mob-menu__social-items">
+                <a href="" class="mob-menu__social-network link">Twitter</a>
+              </li>
+              <li class="mob-menu__social-items">
+                <a href="" class="mob-menu__social-network link">Instagram</a>
+              </li>
+              <li class="mob-menu__social-items">
+                <a href="" class="mob-menu__social-network link">Facebook</a>
+              </li>
+              <li class="mob-menu__social-items">
+                <a href="" class="mob-menu__social-network link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -199,12 +205,20 @@
             <li class="items">
               <div class="work-pic">
                 <div class="work-img">
-                  <img
-                    src="./images/1.jpg"
-                    alt="endcode"
-                    width="370"
-                    class="img"
-                  />
+                  <picture
+                    ><source
+                      srcset="
+                        ./images/work/work-1-370.jpg    1x,
+                        ./images/work/work-1-370@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <img
+                      src="./images/1.jpg"
+                      alt="endcode"
+                      width="370"
+                      class="img"
+                  /></picture>
+
                   <div class="work-overlay">
                     <span class="work-text">Десктопные приложения</span>
                   </div>
@@ -214,12 +228,19 @@
             <li class="items">
               <div class="work-pic">
                 <div class="work-img">
-                  <img
-                    src="./images/2.jpg"
-                    alt="endcode"
-                    width="370"
-                    class="img"
-                  />
+                  <picture
+                    ><source
+                      srcset="
+                        ./images/work/work-2-370.jpg    1x,
+                        ./images/work/work-2-370@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <img
+                      src="./images/2.jpg"
+                      alt="endcode"
+                      width="370"
+                      class="img"
+                  /></picture>
                   <div class="work-overlay">
                     <span class="work-text">Мобильные приложения</span>
                   </div>
@@ -229,12 +250,19 @@
             <li class="items">
               <div class="work-pic">
                 <div class="work-img">
-                  <img
-                    src="./images/3.jpg"
-                    alt="endcode"
-                    width="370"
-                    class="img"
-                  />
+                  <picture
+                    ><source
+                      srcset="
+                        ./images/work/work-3-370.jpg    1x,
+                        ./images/work/work-3-370@2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)" />
+                    <img
+                      src="./images/3.jpg"
+                      alt="endcode"
+                      width="370"
+                      class="img"
+                  /></picture>
                   <div class="work-overlay">
                     <span class="work-text">Дизайнерские решения</span>
                   </div>
@@ -250,7 +278,25 @@
           <h3 class="team-title">Наша команда</h3>
           <ul class="team-list list">
             <li class="team-line">
-              <img src="./images/4.jpg" alt="photo" width="270" class="img" />
+              <picture
+                ><source
+                  srcset="
+                    ./images/team/team-270px/team-one-270.jpg    1x,
+                    ./images/team/team-270px/team-one-270@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/team-354px/team-one-354.jpg    1x,
+                    ./images/team/team-354px/team-one-354@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/team-450px/team-one-450.jpg    1x,
+                    ./images/team/team-450px/team-one-450@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)" />
+                <img src="./images/4.jpg" alt="photo" width="270" class="img"
+              /></picture>
               <h3 class="team-header">Игорь Демьяненко</h3>
               <p class="team-garagraph">Product Designer</p>
               <div class="social-box">
@@ -311,7 +357,25 @@
               </div>
             </li>
             <li class="team-line">
-              <img src="./images/5.jpg" alt="photo" width="270" class="img" />
+              <picture
+                ><source
+                  srcset="
+                    ./images/team/team-270px/team-two-270.jpg    1x,
+                    ./images/team/team-270px/team-two-270@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/team-354px/team-two-354.jpg    1x,
+                    ./images/team/team-354px/team-two-354@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/team-450px/team-two-450.jpg    1x,
+                    ./images/team/team-450px/team-two-450@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)" />
+                <img src="./images/5.jpg" alt="photo" width="270" class="img"
+              /></picture>
               <h3 class="team-header">Ольга Репина</h3>
               <p class="team-garagraph">Frontend Developer</p>
               <div class="social-box">
@@ -372,7 +436,25 @@
               </div>
             </li>
             <li class="team-line">
-              <img src="./images/6.jpg" alt="photo" width="270" class="img" />
+              <picture
+                ><source
+                  srcset="
+                    ./images/team/team-270px/team-three-270.jpg    1x,
+                    ./images/team/team-270px/team-three-270@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/team-354px/team-three-354.jpg    1x,
+                    ./images/team/team-354px/team-three-354@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/team-450px/team-three-450.jpg    1x,
+                    ./images/team/team-450px/team-three-450@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)" />
+                <img src="./images/6.jpg" alt="photo" width="270" class="img"
+              /></picture>
               <h3 class="team-header">Николай Тарасов</h3>
               <p class="team-garagraph">Marketing</p>
               <div class="social-box">
@@ -433,7 +515,25 @@
               </div>
             </li>
             <li class="team-line">
-              <img src="./images/7.jpg" alt="photo" width="270" class="img" />
+              <picture
+                ><source
+                  srcset="
+                    ./images/team/team-270px/team-four-270.jpg    1x,
+                    ./images/team/team-270px/team-four-270@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/team-354px/team-four-354.jpg    1x,
+                    ./images/team/team-354px/team-four-354@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/team-450px/team-four-450.jpg    1x,
+                    ./images/team/team-450px/team-four-450@2x.jpg 2x
+                  "
+                  media="(min-width: 480px)" />
+                <img src="./images/7.jpg" alt="photo" width="270" class="img"
+              /></picture>
               <h3 class="team-header">Михаил Ермаков</h3>
               <p class="team-garagraph">UI Designer</p>
               <div class="social-box">
@@ -742,5 +842,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
