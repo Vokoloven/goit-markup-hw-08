@@ -984,7 +984,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .footer .address-box {
-    margin-right: auto;
+    margin-right: 70px;
     margin-left: 0;
   }
 }
@@ -998,6 +998,13 @@ body {
 @media screen and (min-width: 768px) {
   .footer .follow-box {
     margin-top: 5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer .follow-box {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
   }
 }
 .footer .follow-title {
@@ -1048,6 +1055,14 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+@media screen and (min-width: 1200px) {
+  .footer .follow-form {
+    margin-left: 93px;
+    margin-right: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 .footer .follow-text {
   display: block;
   margin-top: 0;
@@ -1061,6 +1076,12 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-color);
+}
+@media screen and (min-width: 1200px) {
+  .footer .follow-text {
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
 .footer .follow-lable {
   flex-direction: column;
@@ -1083,6 +1104,11 @@ body {
 @media screen and (min-width: 768px) {
   .footer .follow-mail {
     min-width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer .follow-mail {
+    min-width: 350px;
   }
 }
 .footer .follow-mail::-moz-placeholder {
