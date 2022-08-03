@@ -916,6 +916,11 @@ body {
     flex-direction: unset;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer .footer-box {
+    flex-wrap: nowrap;
+  }
+}
 .footer .footer-logo {
   display: inline-block;
   margin-bottom: 20px;
@@ -1061,6 +1066,7 @@ body {
     margin-right: 0;
     flex-direction: row;
     flex-wrap: wrap;
+    align-content: flex-start;
   }
 }
 .footer .follow-text {
@@ -1153,6 +1159,11 @@ body {
   border: none;
   cursor: pointer;
 }
+@media screen and (min-width: 1200px) {
+  .footer .follow-button {
+    margin-left: 10px;
+  }
+}
 .footer .follow-button-text {
   margin-right: 10px;
   font-family: inherit;
@@ -1167,6 +1178,11 @@ body {
 .footer .follow-form .icon {
   width: 24px;
   height: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .footer .follow-container {
+    display: flex;
+  }
 }
 
 /* Follower  */

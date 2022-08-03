@@ -13,6 +13,10 @@
     @include tablet {
       flex-direction: unset;
     }
+
+    @include desktop {
+      flex-wrap: nowrap;
+    }
   }
 
   .footer-logo {
@@ -158,6 +162,7 @@
       margin-right: 0;
       flex-direction: row;
       flex-wrap: wrap;
+      align-content: flex-start;
     }
 
     // justify-content: flex-end;
@@ -233,6 +238,10 @@
     background-color: var(--button-color);
     border: none;
     cursor: pointer;
+
+    @include desktop {
+      margin-left: 10px;
+    }
   }
 
   .follow-button-text {
@@ -251,6 +260,12 @@
   .follow-form .icon {
     width: 24px;
     height: 24px;
+  }
+
+  @include desktop {
+    .follow-container {
+      display: flex;
+    }
   }
 }
 
