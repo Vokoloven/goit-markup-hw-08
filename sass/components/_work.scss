@@ -3,6 +3,10 @@
 
   @include desktop {
     display: contents;
+
+    > .container {
+      padding-bottom: 94px;
+    }
   }
 
   padding-bottom: 94px;
