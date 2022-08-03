@@ -88,6 +88,10 @@
   // width: 270px;
   margin-bottom: 10px;
 
+  @include mobile {
+    text-align: center;
+  }
+
   @include tablet {
     text-align: start;
   }
