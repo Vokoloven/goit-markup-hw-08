@@ -297,6 +297,7 @@
 .mob-menu__social-network {
   position: relative;
   @include fonts($fw: 500, $fs: 18px, $lh: 22px, $ls: 0.02em);
+  color: var(--button-color);
 
   @include trans($tf: color);
   &:hover,
