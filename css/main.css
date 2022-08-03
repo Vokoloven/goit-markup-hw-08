@@ -970,7 +970,9 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .footer .address-list {
-    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 .footer .goto:not(:last-child) {
